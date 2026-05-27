@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>PowerWyze</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Inter:wght@400;500;600&family=Oswald:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="grain"></div>
+    <div class="gradient-veil"></div>
+
+    <div class="rotate-warning" id="rotateWarning">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-9-9c2.52 0 4.93 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/></svg>
+        <p>Please rotate to portrait</p>
+    </div>
+
+    <div class="logo">POWERWYZE</div>
+
+    <!-- Launch Screen -->
+    <div id="launchScreen" class="screen active">
+        <div class="orbital-ring"></div>
+        <div class="launch-content">
+            <h1 id="welcomeGreeting" class="greeting">Hello, Shane.</h1>
+            <p id="welcomeMessage" class="greeting-sub">Stephanie & Bryan have a few things to show you.</p>
+            <button id="beginPitchBtn" class="btn btn-primary">Begin Pitch &rarr;</button>
+        </div>
+    </div>
+
+    <!-- Main Kiosk -->
+    <div id="mainKiosk" class="screen" style="display: none;">
+        
+        <!-- Tab 1: The Pitch -->
+        <div id="tab1" class="tab-content active">
+            <div id="slideContainer" class="slide-container">
+                <!-- Slides injected by JS -->
+            </div>
+        </div>
+
+        <!-- Tab 2: Products & Traction -->
+        <div id="tab2" class="tab-content">
+            <div class="content-scroll">
+                <div class="traction-strip">
+                    <div class="metric-card">
+                        <div class="metric-val">271</div>
+                        <div class="metric-lbl">Leads captured</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-val">271</div>
+                        <div class="metric-lbl">Images emailed</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-val">6</div>
+                        <div class="metric-lbl">Events completed today</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-val">$9,000</div>
+                        <div class="metric-lbl">Profit today (6 events, 1 kiosk)</div>
+                    </div>
+                </div>
+                
+                <div class="clients-pill-row">
+                    <span class="pill">Bartenura</span>
+                    <span class="pill">Dominican Republic Tradeshow</span>
+                    <span class="pill">Ron Barceló</span>
+                    <span class="pill">Curaleaf</span>
+                </div>
+
+                <div class="product-cards">
+                    <div class="product-card" onclick="this.classList.toggle('expanded')">
+                        <div class="card-header">
+                            <h3>RoboKiosk + Photo Booth</h3>
+                            <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" fill="none" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+                        </div>
+                        <div class="card-body">
+                            <p>Combined interactive kiosk and branded photo booth experience for high engagement activations.</p>
+                            <ul class="pricing-list">
+                                <li>$600 / 5-hour photo booth rental</li>
+                                <li>$1,000 / full-day photo booth rental (with branding)</li>
+                                <li>$1,200/day for bespoke software bundle</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="product-card" onclick="this.classList.toggle('expanded')">
+                        <div class="card-header">
+                            <h3>RoboKiosk + Print Production</h3>
+                            <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" fill="none" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+                        </div>
+                        <div class="card-body">
+                            <p>Kiosk paired with a print production lane for personalized output and higher dwell time.</p>
+                            <ul class="pricing-list">
+                                <li>starting at $1,200/day</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="product-card" onclick="this.classList.toggle('expanded')">
+                        <div class="card-header">
+                            <h3>Wize Pin</h3>
+                            <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" fill="none" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+                        </div>
+                        <div class="card-body">
+                            <p>Wearable conversation capture for stronger follow-up quality.</p>
+                            <ul class="pricing-list">
+                                <li>$50 per pin/day</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tab 3: The Ask -->
+        <div id="tab3" class="tab-content">
+            <div class="content-scroll">
+                <div class="ask-hero">
+                    <h2>$350,000 for 20% equity</h2>
+                    <p class="implied">Implied post-money: $1.75M</p>
+                </div>
+
+                <div class="ask-section">
+                    <h3>Mission</h3>
+                    <p>Scale PowerWyze into the leading permanent AI hardware solution for vendors, event hosts, marketing agencies, and convention centers.</p>
+                </div>
+
+                <div class="ask-section">
+                    <h3>Why now</h3>
+                    <p>The event and conference space has many one off activations, but no durable standardized AI hardware stack deployed across multiple events year round. PowerWyze is built to become that permanent infrastructure layer.</p>
+                </div>
+
+                <div class="ask-section">
+                    <h3>Use of Funds (12 to 18 months)</h3>
+                    <ul class="funds-list">
+                        <li>5 additional kiosks — expand simultaneous event capacity and contract fulfillment.</li>
+                        <li>Operations van — improve event logistics, setup speed, and deployment reliability.</li>
+                        <li>Office and operating base — support production, staging, and client operations.</li>
+                        <li>Team salaries — Full-time salaries for CTO, CEO, and 1 full-time employee.</li>
+                        <li>Execution reserve — shipping, maintenance, and growth overhead tied to multi-event contracts.</li>
+                    </ul>
+                </div>
+
+                <div class="ask-section">
+                    <h3>5-Year Projections</h3>
+                    <div class="projection-chart">
+                        <div class="bar-row">
+                            <div class="bar-label">Fleet (10 → 30)</div>
+                            <div class="bar-track"><div class="bar-fill" style="width: 100%;"></div><div class="bar-start" style="width: 33%;"></div></div>
+                        </div>
+                        <div class="bar-row">
+                            <div class="bar-label">Contracts (6 → 126)</div>
+                            <div class="bar-track"><div class="bar-fill" style="width: 100%;"></div><div class="bar-start" style="width: 5%;"></div></div>
+                        </div>
+                        <div class="bar-row">
+                            <div class="bar-label">Revenue ($151K → $2.66M)</div>
+                            <div class="bar-track"><div class="bar-fill" style="width: 100%;"></div><div class="bar-start" style="width: 6%;"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="founders-footer">
+                    Stephanie Sabba (CEO) + Bryan Stewart (CTO) &middot; Co-Founders
+                </div>
+            </div>
+        </div>
+
+        <!-- Tab 4: Commit Interest -->
+        <div id="tab4" class="tab-content">
+            <div class="content-scroll form-container">
+                <h2>Commit Interest</h2>
+                <form id="leadForm">
+                    <div class="form-group">
+                        <label>Full name</label>
+                        <input type="text" id="nameInput" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" id="emailInput" placeholder="shane@..." required>
+                    </div>
+                    <div class="form-group">
+                        <label>Indicated check size</label>
+                        <select id="checkSizeInput">
+                            <option value="Exploring">Exploring</option>
+                            <option value="$25K–$50K">$25K–$50K</option>
+                            <option value="$50K–$100K">$50K–$100K</option>
+                            <option value="$100K+">$100K+</option>
+                            <option value="Lead the round">Lead the round</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Preferred next step</label>
+                        <select id="nextStepInput">
+                            <option value="Schedule deep-dive call">Schedule deep-dive call</option>
+                            <option value="Send data room access">Send data room access</option>
+                            <option value="Sign SAFE">Sign SAFE</option>
+                            <option value="Just keep me in the loop">Just keep me in the loop</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Notes (optional)</label>
+                        <textarea id="notesInput" rows="3" placeholder="Anything you'd like Stephanie & Bryan to know?"></textarea>
+                    </div>
+                    <button type="submit" id="submitBtn" class="btn btn-primary full-width">Commit Interest &rarr;</button>
+                </form>
+
+                <div id="successState" style="display: none;">
+                    <div class="confetti"></div>
+                    <h3 id="successMessage">Thanks, Shane. Stephanie or Bryan will follow up shortly. 🤝</h3>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Nav -->
+        <nav class="bottom-nav">
+            <button class="nav-btn active" data-tab="tab1">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                <span>Pitch</span>
+            </button>
+            <button class="nav-btn" data-tab="tab2">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/></svg>
+                <span>Products</span>
+            </button>
+            <button class="nav-btn" data-tab="tab3">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                <span>Ask</span>
+            </button>
+            <button class="nav-btn" data-tab="tab4">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
+                <span>Commit</span>
+            </button>
+        </nav>
+        
+        <!-- Talk to AI FAB -->
+        <button id="aiFab" class="fab">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" x2="12" y1="19" y2="22"/></svg>
+        </button>
+    </div>
+
+    <!-- Voice Agent Modal -->
+    <div id="voiceModal" class="modal">
+        <div class="modal-content">
+            <button id="closeVoiceBtn" class="close-btn"><svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+            
+            <div class="orb-container">
+                <div class="orb" id="voiceOrb"></div>
+            </div>
+            
+            <div id="voiceTranscript" class="transcript">
+                Connecting to AI...
+            </div>
+            
+            <button id="endCallBtn" class="btn btn-danger">End Call</button>
+        </div>
+    </div>
+
+    <script src="https://elevenlabs.io/convai-sdk/index.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

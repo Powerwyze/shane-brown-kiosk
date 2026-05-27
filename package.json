@@ -1,0 +1,11 @@
+{
+  "name": "shane-brown-kiosk",
+  "version": "1.0.0",
+  "description": "Investor kiosk for Shane Brown x PowerWyze",
+  "scripts": {
+    "start": "python3 -m http.server 4072 -d public"
+  },
+  "dependencies": {
+    "nodemailer": "^6.9.13"
+  }
+}
