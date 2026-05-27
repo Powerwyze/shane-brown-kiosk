@@ -80,8 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Launch Screen to Main App
     document.getElementById('beginPitchBtn').addEventListener('click', () => {
         document.getElementById('launchScreen').classList.remove('active');
-        document.getElementById('mainKiosk').style.display = 'block';
-        setTimeout(() => document.getElementById('mainKiosk').classList.add('active'), 50);
+        document.getElementById('mainKiosk').classList.add('active');
         renderSlides();
         
         // Auto advance logic

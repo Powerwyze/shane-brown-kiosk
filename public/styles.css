@@ -103,9 +103,18 @@ h1, h2, h3, .logo {
     z-index: 1;
     display: flex;
     flex-direction: column;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 240ms ease;
 }
 
-.screen.active { z-index: 2; }
+.screen.active {
+    z-index: 2;
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+}
 
 /* Launch Screen */
 #launchScreen {
